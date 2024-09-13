@@ -3,7 +3,7 @@
         <!-- Tombol Back di sini -->
         <div class="mb-4">
             <a href="{{ route('catin') }}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                Back
+                Kembali
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 ml-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L9.75 12m0 0L7.5 14.25M9.75 12L7.5 9.75M9.75 12l2.25 2.25m2.58 4.92 6.374-6.375a1.125 1.125 0 0 0 0-1.59L14.58 4.83a1.125 1.125 0 0 0-.795-.33H4.5a2.25 2.25 0 0 0-2.25 2.25v10.5a2.25 2.25 0 0 0 2.25 2.25h9.284c.298 0 .585-.119.795-.33z" />
                 </svg>
