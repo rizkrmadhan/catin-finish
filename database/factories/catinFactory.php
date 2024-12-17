@@ -111,9 +111,9 @@ class CatinFactory extends Factory
             'provinsi' => 'Jawa Timur', // Default Provinsi
             'kabupaten' => 'Madiun', // Default Kabupaten
             'kecamatan' => $this->faker->randomElement([
-                'Kecamatan Balerejo', 'Kecamatan Dagangan', 'Kecamatan Dolopo', 'Kecamatan Geger', 
-                'Kecamatan Gemarang', 'Kecamatan Jiwan', 'Kecamatan Kare', 'Kecamatan Kebonsari', 
-                'Kecamatan Madiun', 'Kecamatan Mejayan', 'Kecamatan Pilang Kenceng', 'Kecamatan Saradan', 
+                'Kecamatan Balerejo', 'Kecamatan Dagangan', 'Kecamatan Dolopo', 'Kecamatan Geger',
+                'Kecamatan Gemarang', 'Kecamatan Jiwan', 'Kecamatan Kare', 'Kecamatan Kebonsari',
+                'Kecamatan Madiun', 'Kecamatan Mejayan', 'Kecamatan Pilang Kenceng', 'Kecamatan Saradan',
                 'Kecamatan Sawahan', 'Kecamatan Wonoasri', 'Kecamatan Wungu'
             ]),'kecamatan' => $selectedKecamatan,
             'kelurahan_desa' => $kelurahanDesaData,
@@ -140,5 +140,5 @@ class CatinFactory extends Factory
             'sumber_bantuan' => $this->faker->sentence,
         ];
     }
-    
+
 }

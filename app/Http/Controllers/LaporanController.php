@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\LaporanExport;
-use App\Models\catin;
+use App\Models\Catin;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;

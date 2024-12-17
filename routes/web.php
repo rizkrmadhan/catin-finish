@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\catin;
+use App\Models\Catin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\catinController;

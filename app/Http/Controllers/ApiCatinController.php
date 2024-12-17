@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\catin;
+use App\Models\Catin;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\catinResource;
 use App\Http\Resources\catinCollection;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\catin;
+use App\Models\Catin;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,7 +58,7 @@ class catinController extends Controller
 
         return view('catin.index', compact('catins'));
     }
-    
+
     public function create()
     {
         return view('catin.create');
@@ -66,7 +66,7 @@ class catinController extends Controller
 
     public function save(Request $request)
     {
-        
+
         $validation = $request->validate([
             'nama' => 'required|string|max:255',
             'nik' => 'required|string|max:16|unique:catins,nik',
@@ -96,7 +96,7 @@ class catinController extends Controller
             'intervensi_lainnya1' => 'nullable|string',
             'intervensi_lainnya2' => 'nullable|string',
             'sumber_bantuan' => 'nullable|string',
-        ]); 
+        ]);
 
         $validation['user_id'] = Auth::id(); // Menyimpan user_id
 
@@ -164,7 +164,7 @@ class catinController extends Controller
             'intervensi_lainnya1' => 'nullable|string',
             'intervensi_lainnya2' => 'nullable|string',
             'sumber_bantuan' => 'nullable|string',
-        ]); 
+        ]);
 
         $catins->update($validation);
 
@@ -188,7 +188,7 @@ class catinController extends Controller
         session()->flash('success', 'Data berhasil dihapus');
 
         return redirect()->route('catin');
-    }    
+    }
 
     public function show($id)
     {
@@ -203,5 +203,5 @@ class catinController extends Controller
         $catins->tanggal_lahir = Carbon::parse($catins->tanggal_lahir);
 
         return view('catin.show', compact('catins'));
-    }    
+    }
 }

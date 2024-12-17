@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\catin;
+use App\Models\Catin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,7 +30,7 @@ class HomeController extends Controller
         } elseif ($user->role == 'user') {
             // Cek semua data catin berdasarkan user_id
             $catins = Catin::where('user_id', $user->id)->get();
-    
+
             // Tentukan status data catin
             if ($catins->count() > 0) {
                 $statusCatin = "Selesai";
@@ -41,13 +41,13 @@ class HomeController extends Controller
                 $statusCatin = "Belum Dibuat";
                 $catinSubmittedAt = [];
             }
-    
+
             // Mendapatkan waktu login terakhir
             $lastLoginAt = $user->last_login_at ? $user->last_login_at->format('H:i') : 'Tidak Tersedia';
-    
+
             // Mengirim status data catin ke view user.dashboard
             return view('user.dashboard', compact('statusCatin', 'lastLoginAt', 'catinSubmittedAt'));
-        }    
+        }
     }
 
 }

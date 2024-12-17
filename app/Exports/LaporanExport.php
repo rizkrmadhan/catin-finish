@@ -73,7 +73,7 @@ class LaporanExport implements FromCollection, WithHeadings, WithColumnWidths, W
 
         // Eksekusi query dan return collection
         return $query->get([
-            'id', 
+            'id',
            'nama',
            'nik',
            'agama',
@@ -195,14 +195,14 @@ class LaporanExport implements FromCollection, WithHeadings, WithColumnWidths, W
                 'C' => NumberFormat::FORMAT_TEXT,           // Format teks untuk kolom NIK (misal di kolom A)
             ];
         }
-    
+
         public function styles(Worksheet $sheet)
         {
             return [
                 // Mengatur style untuk header
                 1 => ['font' => ['bold' => true]],
             ];
-        }  
+        }
 
         public function map($row): array
         {
