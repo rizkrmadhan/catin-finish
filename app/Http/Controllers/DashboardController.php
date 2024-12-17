@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\catin;  
+use App\Models\Catin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
-{   
+{
     public function index()
     {
         $user = Auth::user();
@@ -35,15 +35,15 @@ class DashboardController extends Controller
                 $statusCatin = "Selesai";
                 $catinSubmittedAt = $catins->pluck('created_at')->map(function ($createdAt) {
                     return $createdAt->setTimezone('Asia/Jakarta'); // Menyimpan instance Carbon tanpa memformat
-                })->toArray();                                
+                })->toArray();
             } else {
                 $statusCatin = "Belum Dibuat";
                 $catinSubmittedAt = [];
             }
-    
+
             // Mendapatkan waktu login terakhir
             $lastLoginAt = $user->last_login_at ? $user->last_login_at->format('H:i') : 'Tidak Tersedia';
-    
+
             // Mengirim status data catin ke view user.dashboard
             return view('user.dashboard', compact('statusCatin', 'catinSubmittedAt', 'lastLoginAt'));
         }

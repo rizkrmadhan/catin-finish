@@ -6,7 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use App\Models\catin;
+use App\Models\Catin;
 
 
 class DatabaseSeeder extends Seeder
@@ -46,6 +46,6 @@ class DatabaseSeeder extends Seeder
             'role' => 'user',
             'password' => Hash::make('password'),
         ]);
-        catin::factory(10)->create();
+        Catin::factory(10)->create();
     }
 }
